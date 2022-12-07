@@ -1,0 +1,119 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="CloseAllApplications" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="960,892" sap2010:WorkflowViewState.IdRef="CloseAllApplications_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Do the necessary procedures for ending the process (e.g., logout) and close the used applications." DisplayName="Close All Applications" sap:VirtualizedContainerService.HintSize="722,827" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log message (close applications)" sap:VirtualizedContainerService.HintSize="680,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Closing applications...&quot;]" />
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke System1_Close workflow" sap:VirtualizedContainerService.HintSize="680,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="System1\System1_Close.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'SHA1 and'" sap:VirtualizedContainerService.HintSize="680,421" sap2010:WorkflowViewState.IdRef="NCheckState_1" Version="V1">
+      <uix:NCheckState.IfExists>
+        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="376,205" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke SHA1Online_Close workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="SHA1Online\SHA1Online_Close.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <scg:Dictionary x:TypeArguments="x:String, Argument" />
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+        </Sequence>
+      </uix:NCheckState.IfExists>
+      <uix:NCheckState.IfNotExists>
+        <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="250,84" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </uix:NCheckState.IfNotExists>
+      <uix:NCheckState.Target>
+        <uix:TargetAnchorable BrowserURL="http://www.sha1-online.com/" DesignTimeRectangle="354, 211, 675, 28" ElementType="Text" FriendlyName="'SHA1 and'" FullSelectorArgument="&lt;webctrl tag='H1' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H1' type='' class='' aaname='SHA1 and other hash functions online generator' check:innerText='SHA1 and other hash functions online generator' /&gt;" Guid="3cf4618a-e8b3-4a67-92dc-4930da7cb580" ImageBase64="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" InformativeScreenshot="c6476823c1c114dc95015711bd007d56.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='SHA1 online' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+          <uix:TargetAnchorable.Anchors>
+            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+              <uix:Target DesignTimeRectangle="354, 179, 675, 17" FriendlyName="'Home Page  SHA1'" FullSelectorArgument="&lt;webctrl parentid='sha1-title' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='sha1-title' tag='DIV' type='' class='menu' aaname='Home Page |  |  | ' check:innerText='Home Page | SHA1 in JAVA | Secure password generator | Linux' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector" />
+            </scg:List>
+          </uix:TargetAnchorable.Anchors>
+        </uix:TargetAnchorable>
+      </uix:NCheckState.Target>
+    </uix:NCheckState>
+  </Sequence>
+</Activity>
